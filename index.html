@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco Route Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MAP -->
+<div id="map"></div>
+
+<!-- CONTROL PANEL -->
+<div class="panel">
+  <h2>🌍 Eco Route</h2>
+
+  <input id="from" placeholder="From location">
+  <input id="to" placeholder="To location">
+
+  <div class="buttons">
+    <button onclick="findRoute()">Route</button>
+    <button onclick="resetMap()">Reset</button>
+  </div>
+
+  <div class="results">
+    <p>📏 Distance: <span id="distance">-</span></p>
+    <p>⏱ Time: <span id="time">-</span></p>
+    <p>🌱 CO₂: <span id="co2">-</span></p>
+    <p>⛽ Cost: <span id="cost">-</span></p>
+  </div>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Your JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
